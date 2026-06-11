@@ -1,11 +1,16 @@
 import './App.css'
-import Header from './components/Header'
+import MainLayout from './layouts/MainLayout'
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
+
 function App() {
 
 
   return (
     <>
-      <Header/>
+      <BrowserRouter>
+          <AppRoutes />
+      </BrowserRouter>
     </>
   )
 }

@@ -2,17 +2,27 @@ import logoIcon from "../assets/shared/logo.svg"
 import hamburguerIcon from "../assets/shared/icon-hamburger.svg"
 import closeIcon from "../assets/shared/icon-close.svg"
 
+import { Link } from "react-router-dom"
+
 import { navigation } from "../data/navigation"
 import { useState } from "react"
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const location = useLocation();
+
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [location.pathname]);
 
     const toggleMenu = () => {
         setIsMenuOpen(prev => !prev)
     }
+
     return (
         <>
             <header className="flex justify-between p-[24px]">
@@ -55,9 +65,11 @@ function Header() {
 
                 <ul className="text-white mt-[60px] ">
                     {navigation.map(item => (
-                        <li key={item.number} className="mb-[26px] font-[Barlow_Condensed] tracking-[2px] text-[18px]">
-                            <span className="ml-[50px] font-bold">{item.number} </span>
-                            <span className="ml-[14px]   ">{item.name}</span>
+                        <li key={item.path}>
+                            <Link  to={item.path} className="mb-[26px] font-[Barlow_Condensed] tracking-[2px] text-[18px] flex">
+                                <span className="ml-[50px] font-bold">{item.number} </span>
+                                <span className="ml-[14px]   ">{item.name}</span>
+                            </Link>
                         </li>
                     ))}
                 </ul>
