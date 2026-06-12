@@ -2,7 +2,7 @@ import logoIcon from "../assets/shared/logo.svg"
 import hamburguerIcon from "../assets/shared/icon-hamburger.svg"
 import closeIcon from "../assets/shared/icon-close.svg"
 
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import { navigation } from "../data/navigation"
 import { useState } from "react"
@@ -66,10 +66,19 @@ function Header() {
                 <ul className="text-white mt-[60px] ">
                     {navigation.map(item => (
                         <li key={item.path}>
-                            <Link  to={item.path} className="mb-[26px] font-[Barlow_Condensed] tracking-[2px] text-[18px] flex">
+                            <NavLink to={item.path} className={({ isActive }) =>
+                                `mb-[26px] font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
+                                border-r-[4px] transition-all duration-600 ease-in-out
+                                
+                                ${isActive
+                                    ? 'border-white'
+                                    : 'border-transparent hover:border-[#d0d6f9]'
+                                }
+                                
+                                ` }>
                                 <span className="ml-[50px] font-bold">{item.number} </span>
                                 <span className="ml-[14px]   ">{item.name}</span>
-                            </Link>
+                            </ NavLink>
                         </li>
                     ))}
                 </ul>
