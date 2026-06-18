@@ -91,7 +91,7 @@ function Header() {
                 </nav>
             </div>{/*Mobile*/}
 
-            <div className="hidden md:flex absolute w-screen"> {/*Tablet*/}
+            <div className="hidden lg:hidden md:flex absolute w-screen"> {/*Tablet*/}
 
                 <header className="flex justify-between w-full" >
                     <div className="m-[24px] ml-[36px]">
@@ -124,6 +124,44 @@ function Header() {
 
                 </header>
             </div>{/*Tablet*/}
+
+            <div className="hidden lg:flex absolute w-screen">{/*Desktop*/}
+
+                <header className="flex justify-between w-full items-center mt-[40px] relative" >
+                    <div className="m-[24px] ml-[36px] mr-[50px]">
+
+                        <img src={logoIcon} alt="Logo" />
+
+                    </div>
+
+                    <div className="h-px flex-1 z-10 bg-white/25">
+
+                    </div>
+
+                    <nav className=" w-[60%] h-[90px] bg-white/5 backdrop-blur-xl -ml-[40px]">
+                        <ul className="text-white flex h-full justify-around ml-[120px]">
+                            {navigation.map(item => (
+                                <li key={item.path}>
+                                    <NavLink to={item.path} className={({ isActive }) =>
+                                        ` font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
+                                border-b-[3px] transition-all duration-600 ease-in-out h-full items-center
+                                
+                                ${isActive
+                                            ? 'border-white'
+                                            : 'border-transparent hover:border-[#d0d6f9]'
+                                        }
+                                
+                                ` }>
+                                        <span className="font-bold mr-2">{item.number} </span>
+                                        <span className="   ">{item.name}</span>
+                                    </ NavLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                </header>
+            </div>{/*Desktop*/}
 
         </>
     )
