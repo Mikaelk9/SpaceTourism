@@ -1,2 +1,13 @@
 @import "tailwindcss";
 
+.font-bellefair {
+  font-family: 'Bellefair', serif;
+}
+
+.font-barlow {
+  font-family: 'Barlow', sans-serif;
+}
+
+.font-barlow-condensed {
+  font-family: 'Barlow Condensed', sans-serif;
+}

@@ -26,7 +26,7 @@ function Header() {
     return (
         <>
             <div className="md:hidden">{/*Mobile*/}
-                <header className="absolute top-0 left-0 z-50 w-full flex justify-between p-[24px]">
+                <header className="absolute top-0 left-0 z-50 w-full flex justify-between p-6">
                     <img src={logoIcon} alt="Logo" />
 
                     {!isMenuOpen && (
@@ -63,18 +63,18 @@ function Header() {
                         }
                 `}
                 >
-                    <div className="flex justify-end  p-[24px]">
+                    <div className="flex justify-end  p-6">
                         <button onClick={toggleMenu} className="cursor-pointer">
                             <img src={closeIcon} alt="Close menu" />
                         </button>
                     </div>
 
-                    <ul className="text-white mt-[60px] ">
+                    <ul className="text-white mt-15 ">
                         {navigation.map(item => (
                             <li key={item.path}>
                                 <NavLink to={item.path} className={({ isActive }) =>
-                                    `mb-[26px] font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
-                                border-r-[4px] transition-all duration-600 ease-in-out
+                                    `mb-6.5 font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
+                                border-r-4 transition-all duration-600 ease-in-out
                                 
                                 ${isActive
                                         ? 'border-white'
@@ -82,8 +82,8 @@ function Header() {
                                     }
                                 
                                 ` }>
-                                    <span className="ml-[50px] font-bold">{item.number} </span>
-                                    <span className="ml-[14px]   ">{item.name}</span>
+                                    <span className="ml-12.5 font-bold">{item.number} </span>
+                                    <span className="ml-3.5 ">{item.name}</span>
                                 </ NavLink>
                             </li>
                         ))}
