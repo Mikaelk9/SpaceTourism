@@ -16,7 +16,7 @@ function Home() {
 
                 <h1 className="font-[Bellefair] text-[80px] md:text-[150px]">SPACE</h1>
 
-                <p className="font-[Barlow] text-[16px] text-[#d0d6f9] text-center leading-[180%] mt-[16px] md:tracking-[1px] md:pl-[100px] md:pr-[100px] lg:p-[0px] lg:max-w-[450px]">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+                <p className="font-[Barlow] text-[16px] text-[#d0d6f9] text-center leading-[180%] mt-[16px] md:tracking-[1px] md:pl-[100px] md:pr-[100px] lg:p-[0px] lg:max-w-[450px] lg:text-start">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
             </div>
 
             <div className="flex flex-col items-center justify-center mt-[100px] group relative  w-[200px] 
