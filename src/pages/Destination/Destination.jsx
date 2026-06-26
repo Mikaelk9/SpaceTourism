@@ -21,7 +21,7 @@ function Destination() {
 
                 <div className=' text-white flex flex-col items-center '>
                     <h2 className='mb-12 font-barlow-condensed tracking-[2px] text-[18px] md:self-start md:ml-10 md:text-[22px] lg:text-[30px]'>
-                        <span className='mr-5 font-bold text-gray-500'>01</span>
+                        <span className='mr-5 font-bold text-zinc-500'>01</span>
                         PICK YOUR DESTINATION
                     </h2>
                     <img className='w-35 md:w-70 lg:w-100' src={destination.image} alt={destination.name} />

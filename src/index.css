@@ -11,3 +11,10 @@
 .font-barlow-condensed {
   font-family: 'Barlow Condensed', sans-serif;
 }
+
+.fade-bottom {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 70%,
+    transparent 100%
+  );}
