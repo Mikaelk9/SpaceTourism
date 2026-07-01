@@ -49,7 +49,7 @@ function Crew() {
 
                         lg:items-start
                         lg:h-full
-                        lg:max-w-[600px]
+                        lg:max-w-150
                         "
                     >
                         {/* TÍTULO */}
@@ -121,7 +121,7 @@ function Crew() {
                                 font-barlow
                                 text-center
 
-                                max-w-[540px]
+                                max-w-135
 
                                 lg:text-left
                                 lg:text-[18px]
@@ -136,16 +136,16 @@ function Crew() {
                         <div
                             className="
                              flex
-    gap-4
-    mt-10
+                             gap-4
+                             mt-10
 
-    justify-center
-    self-center
+                            justify-center
+                            self-center
 
-    lg:self-start
-    lg:justify-start
-    lg:mb-8
-    lg:gap-6
+                            lg:self-start
+                            lg:justify-start
+                            lg:mb-8
+                            lg:gap-6
                             "
                         >
                             {crews.map((item, index) => (
@@ -184,11 +184,11 @@ function Crew() {
                     >
                         <img
                             className="
-                            h-[360px]
+                            h-90
 
-                            md:h-[520px]
+                            md:h-130
 
-                            lg:h-[560px]
+                            lg:h-140
 
                             fade-bottom
                             "
