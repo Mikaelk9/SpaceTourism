@@ -6,7 +6,7 @@ O objetivo foi praticar a criação de uma SPA totalmente responsiva, aplicando 
 
 ## 📸 Preview
 
-> Adicione aqui um GIF ou imagem do projeto.
+![](./preview.jpg)
 
 ---
 
@@ -65,7 +65,7 @@ Durante este projeto pratiquei:
 
 Acesse o projeto online:
 
-**🔗** *Adicione aqui o link da Vercel*
+[Space Tourism](https://space-tourism-seven.vercel.app/)
 
 ---
 
