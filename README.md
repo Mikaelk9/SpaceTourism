@@ -1,16 +1,83 @@
-# React + Vite
+# 🚀 Space Tourism Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como solução do desafio **Space Tourism** do **Frontend Mentor**, utilizando **React**, **Vite** e **Tailwind CSS**.
 
-Currently, two official plugins are available:
+O objetivo foi praticar a criação de uma SPA totalmente responsiva, aplicando boas práticas de organização, componentização e desenvolvimento Front-End.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Preview
 
-## React Compiler
+> Adicione aqui um GIF ou imagem do projeto.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* React Router DOM
+* Tailwind CSS
+* JavaScript
+
+---
+
+## ✨ Funcionalidades
+
+* Navegação entre páginas com React Router
+* Layout totalmente responsivo
+* Troca dinâmica de conteúdo utilizando `useState`
+* Design fiel ao protótipo do Frontend Mentor
+* Imagens diferentes para Mobile, Tablet e Desktop
+
+---
+
+## 📁 Estrutura
+
+```text
+src/
+├── assets/
+├── components/
+├── data/
+├── layouts/
+├── pages/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 📚 Principais aprendizados
+
+Durante este projeto pratiquei:
+
+* Componentização com React
+* Organização de projetos em pastas
+* React Router e Layouts
+* Manipulação de estado com `useState`
+* Renderização dinâmica utilizando `map()`
+* Responsividade com Tailwind CSS
+* Mobile First
+* Refinamento de layouts utilizando `clamp()`
+* Deploy na Vercel
+
+---
+
+## 🚀 Deploy
+
+Acesse o projeto online:
+
+**🔗** *Adicione aqui o link da Vercel*
+
+---
+
+## 🎯 Próximos passos
+
+* Melhorar animações entre páginas
+* Implementar transições mais suaves
+* Continuar refinando a responsividade
+* Aplicar conceitos mais avançados de React em projetos futuros
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Mikael Torres**.

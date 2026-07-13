@@ -12,7 +12,11 @@ function Technology() {
         md:bg-[url('/src/assets/technology/background-technology-tablet.jpg')]
         lg:bg-[url('/src/assets/technology/background-technology-desktop.jpg')]"
         >
-            <section className=" h-full flex flex-col items-center pt-30 px-6 md:pt-40 lg:px-20">
+            <section className=" h-full flex flex-col items-center 
+            pt-[clamp(7rem,12vh,10rem)]
+            px-6  
+            lg:px-20
+            lg:pt-[clamp(9rem,14vh,11rem)]">
                 <h2 className="mb-12 font-barlow-condensed tracking-[2px] text-[18px] text-white
                             md:self-start
                             md:ml-10
@@ -21,20 +25,20 @@ function Technology() {
 
                             lg:ml-0
                             lg:text-[28px]
-                            lg:mb-[clamp(1.5rem,4vh,4rem)]
+                            lg:mb-[clamp(2rem,5vh,5rem)]
                             "
-                    >
-                        <span className="mr-5 font-bold text-zinc-500">
-                            03
-                        </span>
-                        SPACE LAUNCH 101
-                    </h2>
+                >
+                    <span className="mr-5 font-bold text-zinc-500">
+                        03
+                    </span>
+                    SPACE LAUNCH 101
+                </h2>
 
                 <main className="flex flex-col items-center lg:flex-row lg:gap-[clamp(2rem,5vw,5rem)] lg:w-full ">
-                    
+
 
                     <div className="self-stretch mb-8 -mx-6 order-1 lg:order-2 lg:mx-0 lg:-mr-20
-                     lg:flex-1 lg:flex lg:justify-end lg:mb-0"> {/* Imagem */}
+                    lg:flex-1 lg:flex lg:justify-end lg:mb-0"> {/* Imagem */}
                         <img
                             className="w-full lg:hidden"
                             src={technologyData.landscape}
@@ -45,15 +49,15 @@ function Technology() {
                         <img
                             className="hidden lg:block
                             h-[clamp(450px,68vh,700px)]
-        object-contain"
+                            object-contain"
                             src={technologyData.portrait}
                             alt={technologyData.title}
                         />
                     </div>
 
-                    <div className="flex flex-col items-center lg:flex-row order-2 lg:order-1 lg:gap-20 "> {/* Conteúdo */}
+                    <div className="flex flex-col items-center lg:flex-row order-2 lg:order-1 lg:gap-[clamp(2rem,5vw,5rem)] "> {/* Conteúdo */}
 
-                        <div className="flex gap-5 mb-12 lg:flex-col"> {/* Botões */}
+                        <div className="flex gap-5 mb-[clamp(2rem,4vh,4rem)] lg:flex-col"> {/* Botões */}
 
                             {technology.map((item, index) => (
 
@@ -84,14 +88,20 @@ function Technology() {
 
                         </div>
 
-                        <div className="flex-1 flex flex-col justify-center items-center lg:items-start">
+                        <div className="flex-1
+                                flex
+                                flex-col
+                                justify-center
+                                items-center
+                                gap-[clamp(0.75rem,2vh,1.5rem)]
+                                lg:items-start">
                             <h3 className=" text-zinc-400 font-bellefair uppercase text-[20px] 
                             md:text-[28px] 
                             lg:text-[32px]">
                                 THE TERMINOLOGY…
                             </h3>
 
-                            <h1 className="font-bellefair uppercase text-[32px] mb-6 text-white
+                            <h1 className="font-bellefair uppercase text-[32px] text-white
                             md:text-[48px] 
                             lg:text-[56px] ">
                                 {technologyData.title}

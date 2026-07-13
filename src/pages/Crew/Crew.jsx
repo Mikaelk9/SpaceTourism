@@ -20,10 +20,11 @@ function Crew() {
             <section
                 className="
                 h-full
-                pt-30
+                pt-[clamp(7rem,12vh,10rem)]
                 px-6
-                md:pt-40
+                
                 lg:px-20
+                lg:pt-[clamp(10rem,16vh,13rem)]
                 "
             >
                 <main
@@ -36,7 +37,7 @@ function Crew() {
                     lg:flex-row
                     lg:items-end
                     lg:justify-between
-                    lg:gap-20
+                    lg:gap-[clamp(3rem,7vw,6rem)]
                     "
                 >
                     {/* COLUNA ESQUERDA */}
@@ -49,13 +50,13 @@ function Crew() {
 
                         lg:items-start
                         lg:h-full
-                        lg:max-w-150
+                        lg:max-w-[clamp(34rem,42vw,38rem)]
                         "
                     >
                         {/* TÍTULO */}
                         <h2
                             className="
-                            mb-12
+                            mb-[clamp(2rem,5vh,4rem)]
                             font-barlow-condensed
                             tracking-[2px]
                             text-[18px]
@@ -136,8 +137,8 @@ function Crew() {
                         <div
                             className="
                              flex
-                             gap-4
-                             mt-10
+                             gap-[clamp(1rem,2vw,1.5rem)]
+                             mt-[clamp(2rem,5vh,4rem)]
 
                             justify-center
                             self-center
@@ -145,7 +146,7 @@ function Crew() {
                             lg:self-start
                             lg:justify-start
                             lg:mb-8
-                            lg:gap-6
+                            
                             "
                         >
                             {crews.map((item, index) => (
@@ -188,7 +189,7 @@ function Crew() {
 
                             md:h-130
 
-                            lg:h-140
+                            lg:h-[clamp(34rem,72vh,44rem)]
 
                             fade-bottom
                             "
