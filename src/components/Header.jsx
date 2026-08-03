@@ -9,11 +9,12 @@ import { useState } from "react"
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-
+import { motion } from "motion/react";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation();
+    const MotionNavLink = motion(NavLink);
 
     useEffect(() => {
         setIsMenuOpen(false);
@@ -74,7 +75,7 @@ function Header() {
                             <li key={item.path}>
                                 <NavLink to={item.path} className={({ isActive }) =>
                                     `mb-6.5 font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
-                                border-r-4 transition-all duration-600 ease-in-out
+                                border-r-4 transition-colors duration-600 ease-in-out
                                 
                                 ${isActive
                                         ? 'border-white'
@@ -94,7 +95,7 @@ function Header() {
             <div className="hidden lg:hidden md:flex absolute w-screen"> {/*Tablet*/}
 
                 <header className="flex justify-between w-full" >
-                    <div className="m-[24px] ml-[36px]">
+                    <div className="m-6 ml-9">
 
                         <img src={logoIcon} alt="Logo" />
 
@@ -103,21 +104,27 @@ function Header() {
                     <nav className=" w-[85%] h-[110px] bg-white/5">
                         <ul className="text-white flex h-full justify-around ml-[80px]">
                             {navigation.map(item => (
-                                <li key={item.path}>
-                                    <NavLink to={item.path} className={({ isActive }) =>
-                                        ` font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
-                                border-b-[3px] transition-all duration-600 ease-in-out h-full items-center
+                                <motion.li 
+                                whileTap={{ scale: 0.95 }}
+                                transition={{duration:0.15}} key={item.path}>
+                                    <NavLink
+                                        
+                                        
+                                        to={item.path}
+                                        className={({ isActive }) =>
+                                            ` font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
+                                            border-b-[3px] transition-colors duration-600 ease-in-out h-full items-center
                                 
                                 ${isActive
-                                            ? 'border-white'
-                                            : 'border-transparent hover:border-[#d0d6f9]'
-                                        }
+                                                ? 'border-white'
+                                                : 'border-transparent hover:border-[#d0d6f9]'
+                                            }
                                 
                                 ` }>
                                         <span className="font-bold mr-2">{item.number} </span>
                                         <span className="   ">{item.name}</span>
                                     </ NavLink>
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
                     </nav>
@@ -138,24 +145,31 @@ function Header() {
 
                     </div>
 
-                    <nav className=" w-[60%] h-[90px] bg-white/5 backdrop-blur-xl -ml-[40px]">
-                        <ul className="text-white flex h-full justify-around ml-[120px]">
+                    <nav className=" w-[60%] h-22.5 bg-white/5 backdrop-blur-xl -ml-10">
+                        <ul className="text-white flex h-full justify-around ml-30">
                             {navigation.map(item => (
-                                <li key={item.path}>
-                                    <NavLink to={item.path} className={({ isActive }) =>
-                                        ` font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
-                                border-b-[3px] transition-all duration-600 ease-in-out h-full items-center
+                                <motion.li 
+                                whileTap={{ scale: 0.95 }}
+                                transition={{duration:0.15}}
+                                key={item.path}>
+                                    <NavLink
+                                        
+                                        
+                                        to={item.path}
+                                        className={({ isActive }) =>
+                                            ` font-[Barlow_Condensed] tracking-[2px] text-[18px] flex 
+                                        border-b-[3px] transition-colors duration-600 ease-in-out h-full items-center
                                 
                                 ${isActive
-                                            ? 'border-white'
-                                            : 'border-transparent hover:border-[#d0d6f9]'
-                                        }
+                                                ? 'border-white'
+                                                : 'border-transparent hover:border-[#d0d6f9]'
+                                            }
                                 
                                 ` }>
                                         <span className="font-bold mr-2">{item.number} </span>
                                         <span className="   ">{item.name}</span>
                                     </ NavLink>
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
                     </nav>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { crews } from "../../data/crews.js";
+import { motion } from "motion/react"
 
 function Crew() {
     const [activeCrews, setActiveCrews] = useState(0);
@@ -150,7 +151,10 @@ function Crew() {
                             "
                         >
                             {crews.map((item, index) => (
-                                <button
+                                <motion.button
+                                
+                                    whileTap={{scale: 0.93}}
+                                    transition={{duration:0.15}}
                                     key={item.name}
                                     onClick={() => setActiveCrews(index)}
                                     className={`
@@ -158,7 +162,7 @@ function Crew() {
                                         w-3
                                         rounded-full
                                         cursor-pointer
-                                        transition-all
+                                        transition-colors
                                         duration-300
 
                                         lg:h-4
@@ -171,7 +175,7 @@ function Crew() {
                                     `}
                                 />
                             ))}
-                        </div>
+                        </div>{/* BOTÕES */}
                     </div>
 
                     {/* IMAGEM */}

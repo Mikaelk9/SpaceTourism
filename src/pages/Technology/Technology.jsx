@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { technology } from "../../data/technology"
+import { motion } from "motion/react"
 
 
 function Technology() {
@@ -61,8 +62,18 @@ function Technology() {
 
                             {technology.map((item, index) => (
 
-                                <button key={item.title} className={`
-                                    rounded-full w-10 h-10 border cursor-pointer transition-all duration-500
+                                <motion.button
+
+                                whileTap={{scale: 0.95}}
+                                transition={{duration: 0.15}}
+                                    
+                                
+                                key={item.title}
+
+                                    className={`
+                                    rounded-full w-10 h-10 border cursor-pointer 
+                                    transition-colors
+                                    duration-500
                                     font-bellefair
 
                                     md:w-15
@@ -73,16 +84,16 @@ function Technology() {
                                     lg:h-18
 
                                     ${index === activeTechnology
-                                        ? 'bg-white text-black border-white'
-                                        : 'bg-transparent border-zinc-500 text-white hover:border-white'
-                                    }
+                                            ? 'bg-white text-black border-white'
+                                            : 'bg-transparent border-zinc-500 text-white hover:border-white'
+                                        }
                                     `}
                                     onClick={() => setActiveTechnology(index)}
                                 >
 
                                     {index + 1}
 
-                                </button>
+                                </motion.button>
 
                             ))}
 

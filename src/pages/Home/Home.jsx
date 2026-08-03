@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom"
+import { motion } from "motion/react"
+
+
 
 
 function Home() {
 
+    const MotionLink = motion(Link);
     return (
 
         <div className=" w-full min-h-screen bg-cover bg-center flex flex-col items-center lg:flex-row lg:justify-around lg:
@@ -26,9 +30,14 @@ function Home() {
                     className="absolute inset-0 scale-150 rounded-full bg-white/10 opacity-0 transition-all  duration-600 group-hover:opacity-100 z-0"
                 />
 
-                <Link to='/destination' className="text-blue-900 bg-white w-40 h-40 rounded-full cursor-pointer flex items-center justify-center font-[Bellefair] text-[20px] tracking-[1px]  z-10 hover:text-gray-600 md:w-62.5 md:h-62.5 ">
+                <MotionLink
+                    whileHover={{scale: 1.03}}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.15 }}
+                    to='/destination'
+                    className="text-blue-900 bg-white w-40 h-40 rounded-full cursor-pointer flex items-center justify-center font-[Bellefair] text-[20px] tracking-[1px]  z-10 hover:text-gray-600 md:w-62.5 md:h-62.5 ">
                     EXPLORE
-                </Link>
+                </MotionLink>
             </div>{/*Button*/}
 
         </div>

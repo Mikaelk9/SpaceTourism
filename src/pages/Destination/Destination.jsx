@@ -1,5 +1,6 @@
 import { destinations } from '../../data/destinations'
 import { useState } from 'react'
+import { motion } from "motion/react"
 
 function Destination() {
 
@@ -42,10 +43,14 @@ function Destination() {
                     '>
 
                         {destinations.map((item, index) => (
-                            <button key={item.name} onClick={() => setActiveDestination(index)}
+                            <motion.button
+                                whileTap={{ scale: 0.95 }}  
+                                transition={{ duration: 0.15 }}
+                                key={item.name}
+                                onClick={() => setActiveDestination(index)}
                                 className={`uppercase p-1.25 cursor-pointer
                                     hover:border-b-2 hover:border-[#D0D6F9] hover:text-white
-                                    transition duration-600 ease-in-out
+                                    transition-[border-color,color] duration-600 ease-in-out
                             
                             ${index === activeDestination
                                         ? "border-b-2 border-white text-white"
@@ -54,7 +59,7 @@ function Destination() {
                             
                             `}>
                                 {item.name}
-                            </button>
+                            </motion.button>
                         ))}
 
                     </div>
